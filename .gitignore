@@ -1,0 +1,106 @@
+# ==============================================================================
+# Hume LMS — .gitignore
+# Private repository: https://github.com/chrisexpertai/hume-curiouspeople
+# ==============================================================================
+
+# ----- Environment & Secrets --------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ----- Laravel Framework & Dependencies --------------------------------------
+/vendor/
+/node_modules/
+
+# Plugin vendor directories (each plugin has its own composer dependencies)
+app/Plugins/*/vendor/
+app/CustomPlugins/vendor/
+app/CustomPlugins/*/vendor/
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# ----- Storage (user uploads, cache, logs) ------------------------------------
+/storage/app/public/*
+!/storage/app/public/.gitkeep
+/storage/app/uploads/*
+!/storage/app/uploads/.gitkeep
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+# ----- Compiled & Generated Assets -------------------------------------------
+/public/hot
+/public/storage
+/public/mix-manifest.json
+
+# ----- User Uploaded Media (public/uploads) -----------------------------------
+/public/uploads/*
+!/public/uploads/.gitkeep
+/public/featured_images/*
+!/public/featured_images/.gitkeep
+/public/files/*
+!/public/files/.gitkeep
+
+# ----- Large Binary / Media Files (project-wide) ------------------------------
+*.mp4
+*.mp3
+*.avi
+*.flv
+*.mov
+*.wmv
+*.wav
+*.ogg
+*.webm
+*.mkv
+*.tiff
+*.vtt
+*.subtitle
+
+# ----- Deployment Scripts (may contain credentials) ---------------------------
+deploy.sh
+
+# ----- IDEs & Editor Files ----------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- OS Generated -----------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ----- PHP -------------------------------------------------------------------
+*.class
+
+# ----- Logs ------------------------------------------------------------------
+*.log
+/log/
+
+# ----- NPM / Node ------------------------------------------------------------
+/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----- Testing ---------------------------------------------------------------
+.phpunit.result.cache
+coverage/
+TEST*.xml
+
+# ----- Misc ------------------------------------------------------------------
+*.app
+*.exe
+*.war
+*.jar
