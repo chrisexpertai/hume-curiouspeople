@@ -232,7 +232,7 @@
 </div>
 @endsection
 
-@push('scripts')
+@section('page-js')
 <script>
 (function () {
     'use strict';
@@ -413,4 +413,4 @@
     }
 })();
 </script>
-@endpush
+@endsection
