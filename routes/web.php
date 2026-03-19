@@ -609,6 +609,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
         Route::get('featured', 'App\Http\Controllers\AdminController@featureCourses')->name('admin_featured_courses');
     });
 
+    // Course Importer — create a course from a pasted document
+    Route::prefix('course-import')->name('admin.course-import.')->group(function () {
+        Route::get('/',         [App\Http\Controllers\Admin\CourseImportController::class, 'index'])  ->name('index');
+        Route::post('/preview', [App\Http\Controllers\Admin\CourseImportController::class, 'preview'])->name('preview');
+        Route::post('/import',  [App\Http\Controllers\Admin\CourseImportController::class, 'import']) ->name('import');
+    });
+
 
 
     Route::group(['prefix' => 'settings'], function () {

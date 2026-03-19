@@ -98,6 +98,9 @@
                         <li class="nav-item"> <a class="nav-link"
                                 href="{{ route('admin_courses') }}">{{ tr('All Courses') }}</a></li>
                         <li class="nav-item"> <a class="nav-link"
+                                href="{{ route('admin.course-import.index') }}">
+                                <i class="bi bi-file-arrow-up me-1"></i>{{ tr('Import from Document') }}</a></li>
+                        <li class="nav-item"> <a class="nav-link"
                                 href="{{ route('category_index') }}">{{ tr('Course Category') }}</a></li>
                     </ul>
                 </li>
